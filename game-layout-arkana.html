@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 75px; }
+    .layout {
+      width: 8rem;
+      height: 8rem;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      grid-gap: .05rem;
+      margin: .1rem auto;
+    }
+    .cell, .rune { width: 1rem; height: 1rem; }
+    .rune { border-radius: 50%; }
+    .pulse { animation: pulse-animation 2s infinite; }
+    @keyframes pulse-animation {
+      from { box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); }
+      to { box-shadow: 0 0 0 50px rgba(0, 0, 0, 0); }
+    }
+  </style>
+  <title>Arkana</title>
+</head>
+<body>
+  <section class="layout"></section>
+  <script type="module" src="Utils.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
